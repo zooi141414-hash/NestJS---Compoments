@@ -1,69 +1,74 @@
-import Image from "next/image";
+// src/app/page.tsx
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col relative overflow-hidden selection:bg-indigo-500 selection:text-white">
+      <Navbar />
+
+      {/* ดวงไฟ Ambient Glow ปรับขนาดตาม Tailwind v4 */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-75 bg-indigo-600/20 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-16 right-10 w-87.5 h-62.5 bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
+
+      <main className="flex-1 flex flex-col items-center justify-center p-6 text-center relative z-10 my-auto">
+        <div className="max-w-2xl space-y-8">
+          
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 backdrop-blur-md shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+            Next.js App Router • Reusable Component
+          </div>
+
+          {/* หัวข้อหลัก เปลี่ยนไปใช้ bg-linear-to-r */}
+          <div className="space-y-3">
+            <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+              ระบบแสดงรายวิชาและ <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400">
+                วงดนตรีโปรด
+              </span>
+            </h1>
+            <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed font-light">
+              ใบงานปฏิบัติการพัฒนา UI แบบนำกลับมาใช้ซ้ำด้วย Next.js, Component Props และ Type Checking ผ่าน TypeScript
+            </p>
+          </div>
+
+          {/* ปุ่ม CTA เปลี่ยนไปใช้ bg-linear-to-r */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+            <Link
+              href="/bands"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-sm bg-linear-to-r from-indigo-600 via-indigo-500 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-xl shadow-indigo-600/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all duration-200"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+              ดูวงดนตรีโปรด (/bands) →
+            </Link>
+          </div>
+
+          {/* การ์ดฟีเจอร์ย่อย */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 text-left">
+            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm">
+              <span className="text-indigo-400 text-lg">✦</span>
+              <h3 className="font-semibold text-xs text-slate-200 mt-1">Reusable</h3>
+              <p className="text-[11px] text-slate-400 mt-0.5">Component นำกลับมาใช้ซ้ำได้</p>
+            </div>
+            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm">
+              <span className="text-purple-400 text-lg">✦</span>
+              <h3 className="font-semibold text-xs text-slate-200 mt-1">TypeScript</h3>
+              <p className="text-[11px] text-slate-400 mt-0.5">Props Interface ครบถ้วน</p>
+            </div>
+            <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm">
+              <span className="text-pink-400 text-lg">✦</span>
+              <h3 className="font-semibold text-xs text-slate-200 mt-1">Optimization</h3>
+              <p className="text-[11px] text-slate-400 mt-0.5">รูปภาพเร็วคมชัดด้วย Next Image</p>
+            </div>
+          </div>
+
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="py-6 border-t border-slate-900/80 text-center text-xs text-slate-500">
+        <p>พัฒนาโดย <span className="text-slate-400 font-medium">นาย ธนโชติ รักชาติ</span> • รหัสนักศึกษา 6804101337</p>
+      </footer>
     </div>
   );
 }
