@@ -1,50 +1,50 @@
 // src/data/bands.ts
-import { Band } from "@/types/band";
+import type { Band } from "@/types/band";
 
 export const bandsData: Band[] = [
   {
     id: 1,
     name: "Bodyslam",
-    genre: "Rock / Progressive Rock",
+    genre: "Rock",
     formedYear: 2002,
-    image: "/images/body-slam.jpg",
-    description: "วงร็อกระดับตำนานของเมืองไทย โดดเด่นด้วยพลังการแสดงสดและเพลงที่มีความหมายสร้างแรงบันดาลใจ",
     isActive: true,
+    image: "/images/body-slam.jpg",
+    description: "วงร็อกระดับตำนานของไทย เจ้าของบทเพลงสร้างแรงบันดาลใจมากมาย",
     members: [
-      { id: 101, name: "ตูน (อาทิวราห์ คงมาลัย)", role: "ร้องนำ" },
-      { id: 102, name: "ปิ๊ด (ธนดล ช้างเสวก)", role: "เบส" },
-      { id: 103, name: "ยอด (ธนชัย ตันตระกูล)", role: "กีตาร์" },
-      { id: 104, name: "ชัช (สุชัฒติ จั่นอี๊ด)", role: "กลอง" },
-      { id: 105, name: "โอม (โอมเปล่ง ขำประเสริฐ)", role: "คีย์บอร์ด" },
+      { id: 101, name: "ตูน (อาทิวราห์)", role: "ร้องนำ", image: "/images/1.png" },
+      { id: 102, name: "ปิ๊ด (ธนดล)", role: "เบส", image: "/images/2.jpg" },
+      { id: 103, name: "ยอด (ธนชัย)", role: "กีตาร์", image: "/images/3.jpg" },
+      { id: 104, name: "ชัช (สุชัฒติ)", role: "กลอง", image: "/images/4.jpg" },
+      { id: 105, name: "โอม (โอมเปล่ง)", role: "คีย์บอร์ด", image: "/images/5.jpg" },
     ],
   },
   {
     id: 2,
     name: "Cocktail",
-    genre: "Classic Rock / Pop Rock",
+    genre: "Classic Rock",
     formedYear: 2002,
+    isActive: false,
     image: "/images/cock-tail.jpg",
-    description: "วงดนตรีร็อกที่มีเอกลักษณ์ผสมผสานเครื่องสายออร์เคสตรา และการร้อยเรียงภาษาในเนื้อเพลงที่สละสลวย",
-    isActive: true, // อยู่ในช่วงทัวร์คอนเสิร์ตส่งท้ายก่อนยุบวง
+    description: "วงดนตรีร็อกผสมผสานเครื่องสายออร์เคสตราที่ถ่ายทอดบทกวีผ่านเสียงเพลง",
     members: [
-      { id: 201, name: "โอม (ปัณฑพล ประสารราชกิจ)", role: "ร้องนำ" },
-      { id: 202, name: "เชา (ชวรัตน์ หรรษคุณาฒัย)", role: "กีตาร์" },
-      { id: 203, name: "ปาร์ค (เกริกเกียรติ สว่างวงศ์)", role: "เบส" },
-      { id: 204, name: "ฟิลิปส์ (ฟิลิปส์ เปรมสิริกรณ์)", role: "กลอง" },
+      { id: 201, name: "โอม (ปัณฑพล)", role: "ร้องนำ", image: "/images/11.jpg" },
+      { id: 202, name: "เชา (ชวรัตน์)", role: "กีตาร์", image: "/images/12.jpg" },
+      { id: 203, name: "ปาร์ค (เกริกเกียรติ)", role: "เบส", image: "/images/13.jpg" },
+      { id: 204, name: "ฟิลิปส์ (ฟิลิปส์)", role: "กลอง", image: "/images/14.jpg" },
     ],
   },
   {
     id: 3,
     name: "Only Monday",
-    genre: "Indie Rock / Alternative",
+    genre: "Indie Rock",
     formedYear: 2020,
-    image: "/images/only-monday.jpg",
-    description: "วงดนตรีรุ่นใหม่ไฟแรงเจ้าของเพลงฮิตติดหู ถ่ายทอดความรู้สึกและมุมมองความรักของคนรุ่นใหม่ได้อย่างลึกซึ้ง",
     isActive: true,
+    image: "/images/Only-Monday.avif ",
+    description: "วงร็อกรุ่นใหม่ไฟแรง เจ้าของเพลงฮิตติดหู 'ได้แต่นึกถึง'",
     members: [
-      { id: 301, name: "ธีร์ (ทีปกร คำสุรีย์)", role: "ร้องนำ / กีตาร์" },
-      { id: 302, name: "โปรด (วริศ สาระเขตต์)", role: "เบส" },
-      { id: 303, name: "เฟรม (คฑาวุธ ขำทอง)", role: "กลอง" },
+      { id: 301, name: "ธีร์ (ทีปกร)", role: "ร้องนำ/กีตาร์", image: "/images/21.jpg" },
+      { id: 302, name: "โปรด (วริศ)", role: "เบส", image: "/images/22.jpg" },
+      { id: 303, name: "เฟรม (คฑาวุธ)", role: "กลอง", image: "/images/23.jpg" },
     ],
   },
 ];
