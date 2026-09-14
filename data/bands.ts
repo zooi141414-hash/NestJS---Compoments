@@ -1,4 +1,3 @@
-// src/data/bands.ts
 import type { Band } from "@/types/band";
 
 export const bandsData: Band[] = [
@@ -39,7 +38,7 @@ export const bandsData: Band[] = [
     genre: "Indie Rock",
     formedYear: 2020,
     isActive: true,
-    image: "/images/Only-Monday.avif ",
+    image: "/images/Only-Monday.avif",
     description: "วงร็อกรุ่นใหม่ไฟแรง เจ้าของเพลงฮิตติดหู 'ได้แต่นึกถึง'",
     members: [
       { id: 301, name: "ธีร์ (ทีปกร)", role: "ร้องนำ/กีตาร์", image: "/images/21.jpg" },

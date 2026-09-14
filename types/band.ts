@@ -1,9 +1,8 @@
-// src/types/band.ts
 export type Member = {
   id: number;
   name: string;
   role: string;
-  image?: string; // เพิ่มฟิลด์รูปโปรไฟล์ของสมาชิก (Optional)
+  image: string;
 };
 
 export type Band = {
@@ -13,6 +12,6 @@ export type Band = {
   formedYear: number;
   isActive: boolean;
   image: string;
-  description?: string;
+  description: string;
   members: Member[];
 };
